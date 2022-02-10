@@ -1,0 +1,120 @@
+:root {
+  --page-bg-color: hsl(217, 54%, 11%);
+  --card-bg-color: hsl(216, 50%, 16%);
+  --text-color: hsl(215, 51%, 70%);
+  --white: hsl(0, 0%, 100%);
+  --accent-color: hsl(178, 100%, 50%);
+  --dark-blue: hsl(215, 32%, 27%);
+  --border-radius: 10px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-bg-color);
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: 5rem;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card,
+.main-img {
+  border-radius: var(--border-radius);
+}
+
+.card {
+  max-width: 350px;
+  background-color: var(--card-bg-color);
+  padding: 22px;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 22px;
+}
+
+.main-img {
+  display: block;
+}
+
+.title:hover,
+.author-name:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.title {
+  color: var(--white);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: var(--accent-color);
+}
+
+.price,
+.duration {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--dark-blue);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  max-height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.author-name {
+  color: var(--white);
+}
+
+a {
+  color: var(--dark-blue);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--text-color);
+}
